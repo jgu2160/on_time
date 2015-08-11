@@ -2,6 +2,8 @@ require 'hurley'
 require 'json'
 
 class TravelTime
+  SERVER_API_KEY= File.readlines("api_key.txt")[0]
+
   def initialize(origin="turing school denver", destination="colorado state capitol", mode="driving")
     origin = origin.gsub(" ", "+")
     destination = destination.gsub(" ", "+")
